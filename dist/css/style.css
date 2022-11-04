@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@font-face {
+  font-family: NotoSans;
+  font-display: swap;
+  src: url("../fonts/NotoSans-Regular.woff2") format("woff2"), url("../fonts/NotoSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Play;
+  font-display: swap;
+  src: url("../fonts/Play-Bold.woff2") format("woff2"), url("../fonts/Play-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Play;
+  font-display: swap;
+  src: url("../fonts/Play-Regular.woff2") format("woff2"), url("../fonts/Play-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: NotoSans;
+  font-size: 100%;
+  line-height: 1;
+  font-weight: 500;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.header {
+  background-color: #FFFFFF;
+}
+
+.header-container {
+  align-items: center;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  max-width: 1400px;
+}
+@media (max-width: 1200px) {
+  .header-container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .header-container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .header-container {
+    max-width: none;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  padding: 26px 10px;
+}
+
+header-logo img {
+  max-width: 100%;
+}
+
+.header-logo__left {
+  font-family: "Play";
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .header-logo__left {
+    max-width: 970px;
+    padding-left: 5px;
+  }
+}
+
+.header-menu__list {
+  display: flex;
+}
+
+.menu__link {
+  padding-right: 24px;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .menu__link {
+    max-width: 970px;
+    padding-right: 10px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+}
+
+.header-phone {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+.header-phone__top {
+  display: flex;
+  align-items: center;
+}
+.header-phone__logo img {
+  padding-right: 12px;
+}
+@media (max-width: 1200px) {
+  .header-phone__logo img {
+    max-width: 970px;
+    padding-right: 5px;
+  }
+}
+.header-phone__number {
+  text-decoration: none;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .header-phone__number {
+    max-width: 970px;
+    font-size: 0.875rem;
+  }
+}
+.header-phone__request {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 0px;
+  opacity: 0.5;
+}
+@media (max-width: 1200px) {
+  .header-phone__request {
+    max-width: 970px;
+    font-size: 0.845rem;
+    padding: 0px 0px;
+  }
+}
+.header-phone__line {
+  border-top: 1px dashed #000000;
+  height: 1px;
+  opacity: 0.5;
+}
+
+.header__button {
+  margin-right: 10px;
+  width: 207px;
+  height: 48px;
+}
+@media (max-width: 1200px) {
+  .header__button {
+    max-width: 970px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 35px;
+  }
+}
+.header__button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Play;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  white-space: nowrap;
+  padding: 15px 27px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 1200px) {
+  .header__button span {
+    max-width: 970px;
+    padding: 12px 18px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  background: rgb(55, 168, 93);
+}

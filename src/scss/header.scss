@@ -1,0 +1,150 @@
+.header {
+	background-color: #FFFFFF;
+}
+.header-container {
+	align-items: center;
+	background: #FFFFFF;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px auto;
+	max-width: 1400px;
+
+	@media (max-width: 1200px) {
+		max-width: 970px;
+	}
+	@media (max-width: 992px) {
+		max-width: 750px;
+	}
+	@media (max-width: 767px) {
+		max-width: none;
+	}
+
+}
+.header-logo {
+	display: flex;
+	align-items: center;
+	padding: 26px 10px;
+}
+
+header-logo img {
+	max-width: 100%;
+}
+
+.header-logo__left {
+	font-family: "Play";
+	align-items: center;
+	justify-content: center;
+	padding-left: 10px;
+	color: #000000;
+
+	@media (max-width: 1200px) {
+		max-width: 970px;
+		padding-left: 5px;
+	}
+}
+.header-menu__list {
+	display: flex;
+
+}
+.menu__item {
+}
+.menu__link {
+	padding-right: 24px;
+	color: #000000;
+
+	@media (max-width: 1200px) {
+		max-width: 970px;
+		padding-right: 10px;
+		font-size: 0.875rem;
+		white-space: nowrap;
+
+
+	}
+}
+.header-phone {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 5px;
+	
+	&__top {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo img {
+		padding-right: 12px;
+
+		@media (max-width: 1200px) {
+			max-width: 970px;
+			padding-right: 5px;
+		}
+	}
+
+	&__number{
+		text-decoration: none;
+		color: #000000;
+
+		@media (max-width: 1200px) {
+			max-width: 970px;
+			font-size: 0.875rem;
+		}
+	}
+
+	&__request {
+		text-decoration: none;
+		color: #000000;
+		padding: 5px 0px;
+		opacity: 0.5;
+
+		@media (max-width: 1200px) {
+			max-width: 970px;
+			font-size: 0.845rem;
+			padding: 0px 0px;
+		}
+	}
+
+	&__line {
+		border-top: 1px dashed #000000; 
+ 		height: 1px;
+		opacity: 0.5; 
+	}
+}
+
+.header__button {
+	margin-right: 10px;
+	width: 207px;
+	height: 48px;
+
+	@media (max-width: 1200px) {
+		max-width: 970px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 160px;
+		height: 35px;
+	}
+
+	& span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: Play;
+		background-color: #ffffff;
+		color: #000000;
+		border: 1px solid #000000;
+		border-radius: 6px;
+		white-space: nowrap;
+		padding: 15px 27px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+
+		
+	@media (max-width: 1200px) {
+		max-width: 970px;
+		padding: 12px 18px;
+	}
+}
+	
+}
+
+//если что убрат / после скобок в Path на 28 строчке
