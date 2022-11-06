@@ -1,5 +1,7 @@
 .header {
 	background-color: #FFFFFF;
+	position: relative;
+	
 }
 .header-container {
 	align-items: center;
@@ -9,21 +11,25 @@
 	margin: 0px auto;
 	max-width: 1400px;
 
-	@media (max-width: 1200px) {
-		max-width: 970px;
-	}
-	@media (max-width: 992px) {
-		max-width: 750px;
-	}
-	@media (max-width: 767px) {
-		max-width: none;
-	}
+	// @media (max-width: 1200px) {
+	// 	max-width: 970px;
+	// }
+	// @media (max-width: 992px) {
+	// 	max-width: 750px;
+	// }
+	// @media (max-width: 767px) {
+	// 	max-width: none;
+	// }
 
 }
 .header-logo {
 	display: flex;
 	align-items: center;
-	padding: 26px 10px;
+	padding: 25px 10px;
+	
+	@media (max-width: 992px) {
+		z-index: 3;
+	}
 }
 
 header-logo img {
@@ -38,33 +44,47 @@ header-logo img {
 	color: #000000;
 
 	@media (max-width: 1200px) {
-		max-width: 970px;
 		padding-left: 5px;
 	}
+
+	@media (max-width: 992px) {
+		padding-left: 10px;
+		font-size: 1.125rem;
+	}
 }
+
+.menu {
+}
+
+.menu__icon {
+	// display: none;
+}
+
 .header-menu__list {
 	display: flex;
-
 }
+
 .menu__item {
 }
+
 .menu__link {
 	padding-right: 24px;
 	color: #000000;
 
 	@media (max-width: 1200px) {
-		max-width: 970px;
 		padding-right: 10px;
 		font-size: 0.875rem;
 		white-space: nowrap;
-
-
 	}
 }
 .header-phone {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 5px;
+
+	@media (max-width: 992px) {
+		z-index: 3;
+	}
 	
 	&__top {
 		display: flex;
@@ -75,8 +95,11 @@ header-logo img {
 		padding-right: 12px;
 
 		@media (max-width: 1200px) {
-			max-width: 970px;
 			padding-right: 5px;
+		}
+
+		@media (max-width: 992px) {
+		padding-right: 12px;
 		}
 	}
 
@@ -85,8 +108,11 @@ header-logo img {
 		color: #000000;
 
 		@media (max-width: 1200px) {
-			max-width: 970px;
 			font-size: 0.875rem;
+		}
+
+		@media (max-width: 992px) {
+			font-size: 1rem;
 		}
 	}
 
@@ -97,9 +123,13 @@ header-logo img {
 		opacity: 0.5;
 
 		@media (max-width: 1200px) {
-			max-width: 970px;
 			font-size: 0.845rem;
 			padding: 0px 0px;
+		}
+
+		@media (max-width: 992px) {
+			padding: 5px 0px;
+			font-size: 1rem;
 		}
 	}
 
@@ -111,17 +141,24 @@ header-logo img {
 }
 
 .header__button {
+	background: #FFFFFF;
 	margin-right: 10px;
 	width: 207px;
 	height: 48px;
 
 	@media (max-width: 1200px) {
-		max-width: 970px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 160px;
 		height: 35px;
+	}
+
+	@media (max-width: 992px) {
+		margin-right: 10px;
+		width: 207px;
+		height: 48px;
+		z-index: 3;
 	}
 
 	& span {
@@ -137,14 +174,110 @@ header-logo img {
 		padding: 15px 27px;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-
-		
+	
 	@media (max-width: 1200px) {
-		max-width: 970px;
 		padding: 12px 18px;
+	}
+	@media (max-width: 992px) {
+		padding: 15px 27px;
 	}
 }
 	
 }
 
-//если что убрат / после скобок в Path на 28 строчке
+//если что убрать / после скобок в Path на 28 строчке
+
+//------------------BURGER MENU-------------------------------------//
+@media (max-width: 992px) {
+	.menu_icon {
+		z-index: 5;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+	}
+// Создание иконки бургер
+	.menu__icon span,
+	.menu__icon::before,
+	.menu__icon::after{
+		z-index: 1;
+		left: 30%;
+		position: absolute;
+		height: 2px;
+		width: 35px;
+		transition: all 0.3s ease 0s;
+		background-color: #000000;
+		cursor: pointer;
+	}
+	.menu__icon::before,
+	.menu__icon::after {
+		content: "";
+	}
+	.menu__icon::before{
+		top: 35px;
+	}
+	.menu__icon::after{
+		bottom: 35px;
+	}
+	.menu__icon span{
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+//Анимация иконки бургер
+	.menu__icon._active span {
+		transform: scale(0) translate(0px, -50%);
+	}
+	.menu__icon._active::before {
+		top: 50%;
+		transform: rotate(-45deg) translate(0px, -50%);
+	}
+	.menu__icon._active::after {
+		bottom: 50%;
+		transform: rotate(45deg) translate(0px, 50%);
+	}
+// Выезжающее меню
+	.menu__body{
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.88);
+		padding: 100px 30px 30px 30px;
+		transition: left 0.3s ease 0s;
+		overflow: auto;
+	}
+	//Чтобы при скролле не двигалась верхняя панель меню
+	.menu__body._active{
+		left: 0;
+	}
+
+	.menu__body::before{
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 101px;
+		background-color: #FFFFFF;
+		z-index: 0;
+	}
+	.header-menu__list{
+		display: flex;
+		flex-direction: column;
+		.menu__link{
+			color: #FFFFFF;
+		}
+	}
+	.menu__item{
+		margin: 0px 0px 30px 0px;
+	}
+	//Убирается отступ у последнего элемента
+	.header-menu__list > li:last-child{
+		margin-bottom: 0px;
+	}
+	.menu__link{
+		font-size: 1.5rem;
+	}
+}

@@ -1,6 +1,5 @@
 @import "fonts";
 
-
 /*Обнуление*/
 *{
 	padding: 0;
@@ -28,6 +27,11 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+//Состояние для класса lock
+.body._lock{
+	overflow: hidden;
+}
+
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
@@ -48,8 +52,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 @import "header";
 
-
 .wrapper {
+	position: relative;
   	width: 100%;
-	background: rgb(55, 168, 93);
 }
