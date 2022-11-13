@@ -57,7 +57,7 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-.body._lock {
+body._lock {
   overflow: hidden;
 }
 
@@ -101,8 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .header {
-  background-color: #FFFFFF;
   position: relative;
+  background-color: #FFFFFF;
   max-width: 1920px;
 }
 
@@ -435,7 +435,6 @@ header-logo img {
 }
 
 .block__row {
-  position: relative;
   display: flex;
   max-width: 1400px;
   height: 979px;
@@ -445,13 +444,9 @@ header-logo img {
 }
 
 .block__element {
-  background-color: red;
   flex: 0 1 50%;
 }
 
-.block__content {
-  position: relative;
-}
 .block__content h1 {
   display: flex;
   text-transform: uppercase;

@@ -1,6 +1,6 @@
 .header {
-	background-color: #FFFFFF;
 	position: relative;
+	background-color: #FFFFFF;
 	max-width: 1920px;
 }
 
@@ -254,12 +254,13 @@ header-logo img {
 		transition: left 0.3s ease 0s;
 		overflow: auto;
 	}
+
 	//Чтобы при скролле не двигалась верхняя панель меню
 	.menu__body._active{
 		left: 0;
 	}
 
-	.menu__body::before{
+	.menu__body::before{ 
 		content: "";
 		position: fixed;
 		width: 100%;
@@ -269,6 +270,7 @@ header-logo img {
 		background-color: #FFFFFF;
 		z-index: 0;
 	}
+
 	.header-menu__list{
 		display: flex;
 		flex-direction: column;

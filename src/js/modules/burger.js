@@ -12,7 +12,6 @@ export default function menuBurger(callback) {
 	}
 }
 
-
 // Прокрутка при клике
 // const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 // if (menuLinks.length > 0) {

@@ -34,7 +34,6 @@
 }
 
 .block__row {
-	position: relative;
 	display: flex;
 	max-width: 1400px;
 	height: 979px;
@@ -44,13 +43,12 @@
 }
 
 .block__element {
-	background-color: red;
 	flex: 0 1 50%;
-	
 }
 
 .block__content {
-	position: relative;
+	
+
 
 	& h1 {
 		display: flex;
