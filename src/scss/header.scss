@@ -1,7 +1,16 @@
 .header {
 	position: relative;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	max-width: 1920px;
+}
+
+.header-fixed{
+	position: fixed;
+   top: 0; 
+   width: 100%;
+   max-width: inherit;
+	z-index: 10;
+	background-color: #ffffff;
 }
 
 .header-container {
@@ -300,3 +309,12 @@ header-logo img {
 	// @media (max-width: 767px) {
 	// 	max-width: none;
 	// }
+
+
+	
+// position: fixed;
+	// top: 0;
+	// left: 0;
+	// z-index: 10;
+	// background-color: #eca9a9;
+	// width: 1920px;
