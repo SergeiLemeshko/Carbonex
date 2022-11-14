@@ -425,7 +425,7 @@ header-logo img {
 .main {
   max-width: 1920px;
   height: 979px;
-  background-image: url("/img/main-img.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)), url("/img/main-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -455,6 +455,11 @@ header-logo img {
 .block__element {
   flex: 0 1 50%;
 }
+@media (max-width: 992px) {
+  .block__element {
+    flex: 0 0 100%;
+  }
+}
 
 .block__content h1 {
   display: flex;
@@ -467,42 +472,52 @@ header-logo img {
   color: #FFFFFF;
   margin-bottom: 24px;
 }
+@media (max-width: 992px) {
+  .block__content h1 {
+    max-width: 900px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .block__content h1 {
+    font-size: 1.625rem;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+  }
+}
 .block__content p {
   font-family: NotoSans;
   color: #FFFFFF;
   line-height: 22px;
   padding-bottom: 24px;
 }
-
-.main__button {
-  background: #FFFFFF;
-  margin-right: 10px;
-  width: 207px;
-  height: 48px;
-}
-@media (max-width: 1200px) {
-  .main__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 160px;
-    height: 35px;
-  }
-}
 @media (max-width: 992px) {
-  .main__button {
+  .block__content p {
+    max-width: 800px;
     margin-right: 10px;
-    width: 207px;
-    height: 48px;
-    z-index: 3;
   }
 }
 @media (max-width: 767px) {
-  .main__button {
-    display: none;
+  .block__content p {
+    max-width: 700px;
+    font-size: 0.96rem;
+    line-height: 19px;
   }
 }
-.main__button span {
+
+.main__button-header {
+  background: #FFFFFF;
+  border-radius: 6px;
+  width: 326px;
+  height: 48px;
+}
+@media (max-width: 767px) {
+  .main__button-header {
+    width: 290px;
+    height: 48px;
+  }
+}
+.main__button-header span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,18 +527,15 @@ header-logo img {
   border: 1px solid #000000;
   border-radius: 6px;
   white-space: nowrap;
-  padding: 15px 27px;
+  width: 326px;
+  height: 48px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-@media (max-width: 1200px) {
-  .main__button span {
-    padding: 12px 18px;
-  }
-}
-@media (max-width: 992px) {
-  .main__button span {
-    padding: 15px 27px;
+@media (max-width: 767px) {
+  .main__button-header span {
+    width: 290px;
+    height: 48px;
   }
 }
 
