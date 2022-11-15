@@ -1,8 +1,11 @@
 import * as flsFunctions from "./modules/functions.js";
 import menuBurger from "./modules/burger.js";
+import form from "./modules/form.js";
+
 
 flsFunctions.isWebp();
 menuBurger();
+form();
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
