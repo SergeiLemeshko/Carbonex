@@ -20,7 +20,7 @@
 		height: 349px;
 	}
 	@media (max-width: 767px) {
-		min-width: 290px;
+		min-width: 290px; 
 		height: 285px;
 		padding: 10px 10px;
 	}
@@ -116,4 +116,41 @@
 		line-height: 18px;
 		letter-spacing: 2px;
 	}
+}
+
+
+
+
+
+//----------------//
+.close{
+	position: absolute;
+	top: -25px;
+	right: -25px;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+}
+
+.close:before,
+.close:after {
+	content: "";
+	position: absolute;
+	top: 21px;
+	left: 10px;
+	width: 26px;
+	height: 2px;
+	background: #2e2b2b;
+}
+
+.close:before {
+	webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close:after {
+	webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }

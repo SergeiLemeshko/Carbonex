@@ -27,6 +27,7 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+
 //Состояние для класса lock
 body._lock{
 	overflow: hidden;
@@ -53,8 +54,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @import "header";
 @import "main";
 @import "form";
-
-
+@import "industries";
+@import "products";
 
 .wrapper {
 	max-width: 1920px;

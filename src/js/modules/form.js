@@ -1,4 +1,3 @@
-
 export default function form(callback) {
 	//--------------Функция показа и закрытия формы------------//
 	function bindForm(trigger, modal, close) {
@@ -27,8 +26,9 @@ export default function form(callback) {
 
 	const formBtn = document.querySelector('.header__button'),
 		form = document.querySelector('.form'),
-		closeForm = document.querySelector('.main__container');
+		closeForm = document.querySelector('.close');
 
+	//---------Убрать сдвиг при скрытии скролла---------//
 
 	// function calcScroll() {
 	// 	let div = document.createElement('div');
@@ -51,10 +51,4 @@ export default function form(callback) {
 	bindForm(formBtn, form, closeForm);
 };
 
-
-
-
-
-
-// bindModal('.form__button', '.form', 'кнопка закрытия', false);
-
+//6:13
