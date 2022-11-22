@@ -1,7 +1,12 @@
 .benefits {
 	max-width: 1920px;
-	height: 300px;
+	height: 350px;
 	background: #F5F5F5;
+
+	@media (max-width: 992px) {
+		height: 600px;
+		
+	}
 }
 .benefits__title {
 	display: block;
@@ -27,6 +32,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
+	@media (max-width: 992px) {
+		height: 512px;
+		background: url('/img/content/Benefits-bcg-2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
 }
 .benefits__container, .container-benefits {
 	max-width: 1400px;
@@ -35,9 +48,18 @@
 .benefits-block {
 	height: 200px;
 	display: flex;
-	// flex-wrap: wrap;
 	justify-content: center;
 	padding: 30px 10px 15px 10px;
+
+	@media (max-width: 1200px) {
+		padding: 20px 10px 15px 10px;
+	}
+
+	@media (max-width: 992px) {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 260px;
+	}
 }
 .benefits-block__item {
 	position: relative;
@@ -45,10 +67,23 @@
 	height: 300px;
 	margin-right: 32px;
 
+	@media (max-width: 1390px) {
+		margin-right: 25px;
+	}
+
+	@media (max-width: 997px) {
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
 	& div {
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
+
+		@media (max-width: 992px) {
+			justify-content: center;
+		}
 		
 		& img {
 			padding-right: 15px;
@@ -65,6 +100,21 @@
 			color: #FFFFFF;
 			padding-top: 15px;
 			padding-bottom: 15px;
+
+			@media (max-width: 1390px) {
+				text-align: left;
+				padding-bottom: 10px;
+			}
+
+			@media (max-width: 767px) {
+				font-size: 1.1rem;
+			}
+		}
+
+		.img-right {
+			@media (max-width: 360px) {
+				padding-left: 60px;
+			}
 		}
 	}
 
@@ -78,12 +128,15 @@
 		padding: 0px;
 
 		@media (max-width: 997px) {
-			padding: 0px 24px 0px 24px;
+			padding: 0px;
 			font-size: 1rem;
+			text-align: center;
 		}
 
 		@media (max-width: 767px) {
 			font-size: 0.9rem;
+			padding: 0px 10px 0px 10px;
+		line-height: 1.25rem;
 		}
 	}
 
@@ -91,4 +144,3 @@
 		margin-right: 0px;
 	}
 }
-

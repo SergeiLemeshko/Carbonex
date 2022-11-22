@@ -1103,8 +1103,13 @@ header-logo img {
 
 .benefits {
   max-width: 1920px;
-  height: 300px;
+  height: 350px;
   background: #F5F5F5;
+}
+@media (max-width: 992px) {
+  .benefits {
+    height: 600px;
+  }
 }
 
 .benefits__title {
@@ -1132,6 +1137,15 @@ header-logo img {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 992px) {
+  .benefits__bcg {
+    height: 512px;
+    background: url("/img/content/Benefits-bcg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 .benefits__container, .container-benefits {
   max-width: 1400px;
@@ -1144,6 +1158,18 @@ header-logo img {
   justify-content: center;
   padding: 30px 10px 15px 10px;
 }
+@media (max-width: 1200px) {
+  .benefits-block {
+    padding: 20px 10px 15px 10px;
+  }
+}
+@media (max-width: 992px) {
+  .benefits-block {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 260px;
+  }
+}
 
 .benefits-block__item {
   position: relative;
@@ -1151,10 +1177,26 @@ header-logo img {
   height: 300px;
   margin-right: 32px;
 }
+@media (max-width: 1390px) {
+  .benefits-block__item {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 997px) {
+  .benefits-block__item {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
 .benefits-block__item div {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .benefits-block__item div {
+    justify-content: center;
+  }
 }
 .benefits-block__item div img {
   padding-right: 15px;
@@ -1171,6 +1213,22 @@ header-logo img {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+@media (max-width: 1390px) {
+  .benefits-block__item div h5 {
+    text-align: left;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .benefits-block__item div h5 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 360px) {
+  .benefits-block__item div .img-right {
+    padding-left: 60px;
+  }
+}
 .benefits-block__item p {
   font-family: "NotoSans";
   font-style: normal;
@@ -1182,17 +1240,26 @@ header-logo img {
 }
 @media (max-width: 997px) {
   .benefits-block__item p {
-    padding: 0px 24px 0px 24px;
+    padding: 0px;
     font-size: 1rem;
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
   .benefits-block__item p {
     font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+    line-height: 1.25rem;
   }
 }
 .benefits-block__item:nth-child(3) {
   margin-right: 0px;
+}
+
+.company {
+  max-width: 1920px;
+  height: 500px;
+  background: #F5F5F5;
 }
 
 .wrapper {
