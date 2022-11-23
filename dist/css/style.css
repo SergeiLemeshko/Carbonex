@@ -1258,8 +1258,148 @@ header-logo img {
 
 .company {
   max-width: 1920px;
-  height: 500px;
+  height: 650px;
   background: #F5F5F5;
+}
+@media (max-width: 1280px) {
+  .company {
+    height: 850px;
+  }
+}
+
+.company__container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.company__title {
+  display: block;
+  margin: 0px auto;
+  padding: 70px 0px 40px 0px;
+}
+@media (max-width: 767px) {
+  .company__title {
+    padding: 0px 0px 40px 0px;
+  }
+}
+.company__title h3 {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.12rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #323232;
+  padding-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .company__title h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.company-block {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+@media (max-width: 1280px) {
+  .company-block {
+    grid-template: 1fr 1fr/1fr;
+  }
+}
+
+.company-block__item-left {
+  padding-top: 40px;
+  height: 420px;
+}
+@media (max-width: 1280px) {
+  .company-block__item-left {
+    order: 1;
+    text-align: center;
+  }
+}
+@media (max-width: 1400px) {
+  .company-block__item-left {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .company-block__item-left {
+    padding-top: 0px;
+  }
+}
+.company-block__item-left p {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  color: #323232;
+  padding: 0px 30px 35px 10px;
+}
+@media (max-width: 1400px) {
+  .company-block__item-left p {
+    padding: 0px 30px 20px 10px;
+    line-height: 1.25rem;
+  }
+}
+@media (max-width: 1280px) {
+  .company-block__item-left p {
+    padding: 0px 10px 25px 10px;
+  }
+}
+@media (max-width: 767px) {
+  .company-block__item-left p {
+    font-size: 0.9rem;
+    padding: 0px 10px 0px 10px;
+    line-height: 1.25rem;
+  }
+}
+
+.company-block__item-right {
+  width: 832px;
+  position: relative;
+  padding-right: 10px;
+}
+@media (max-width: 1280px) {
+  .company-block__item-right {
+    order: 0;
+    justify-self: center;
+  }
+}
+@media (max-width: 992px) {
+  .company-block__item-right {
+    width: 731px;
+    justify-self: center;
+    padding-right: 0px;
+  }
+}
+
+.company-block__img-1 {
+  z-index: 5;
+  position: absolute;
+  padding-top: 29px;
+  padding-right: 29px;
+  border-radius: 6px;
+}
+@media (max-width: 992px) {
+  .company-block__img-1 {
+    width: 712px;
+  }
+}
+
+.company-block__img-2 {
+  z-index: 1;
+  position: absolute;
+  padding-top: 0px;
+  padding-left: 29px;
+  border-radius: 6px;
+}
+@media (max-width: 992px) {
+  .company-block__img-2 {
+    width: 712px;
+  }
 }
 
 .wrapper {
