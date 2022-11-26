@@ -23,6 +23,10 @@
 		text-transform: uppercase;
 		color: #323232;
 		padding-bottom: 10px;
+
+		@media (max-width: 767px) {
+			font-size: 1.75rem;
+		}
 	}
 }
 .benefits__bcg {
