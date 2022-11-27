@@ -700,7 +700,7 @@ header-logo img {
 .industries {
   max-width: 1920px;
   height: 475px;
-  background: #F5F5F5;
+  background: #F7F7F7;
 }
 @media (max-width: 992px) {
   .industries {
@@ -881,7 +881,7 @@ header-logo img {
 .products {
   max-width: 1920px;
   height: 500px;
-  background: #F5F5F5;
+  background: #ffffff;
 }
 @media (max-width: 1400px) {
   .products {
@@ -1104,7 +1104,7 @@ header-logo img {
 .benefits {
   max-width: 1920px;
   height: 350px;
-  background: #F5F5F5;
+  background: #ffffff;
 }
 @media (max-width: 992px) {
   .benefits {
@@ -1264,7 +1264,7 @@ header-logo img {
 .company {
   max-width: 1920px;
   height: 650px;
-  background: #F5F5F5;
+  background: #ffffff;
 }
 @media (max-width: 1280px) {
   .company {
@@ -1471,7 +1471,7 @@ header-logo img {
 .news {
   max-width: 1920px;
   height: 600px;
-  background: #F5F5F5;
+  background: #ffffff;
 }
 @media (max-width: 1400px) {
   .news {
@@ -1720,6 +1720,238 @@ header-logo img {
 }
 
 .news__button:hover {
+  background-color: #d19439;
+  cursor: pointer;
+}
+
+.contacts {
+  max-width: 1920px;
+  height: 570px;
+  background: #F7F7F7;
+}
+@media (max-width: 1200px) {
+  .contacts {
+    height: 850px;
+  }
+}
+
+.contacts__container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.contacts__title {
+  display: block;
+  margin: 0px auto;
+  padding: 60px 0px 10px 0px;
+}
+@media (max-width: 767px) {
+  .contacts__title {
+    padding: 40px 0px 0px 0px;
+  }
+}
+.contacts__title h3 {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.12rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #323232;
+  padding-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .contacts__title h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.contacts-block {
+  height: 600px;
+}
+
+.contacts-block__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 430px;
+}
+@media (max-width: 1200px) {
+  .contacts-block__item {
+    flex-direction: column-reverse;
+    margin-top: 150px;
+  }
+}
+
+.contacts-block__details {
+  width: 700px;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+@media (max-width: 1200px) {
+  .contacts-block__details {
+    width: 445px;
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-block__details {
+    width: 300px;
+  }
+}
+.contacts-block__details .contacts-block__data {
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #323232;
+  padding-bottom: 32px;
+}
+@media (max-width: 767px) {
+  .contacts-block__details .contacts-block__data {
+    font-size: 1.75rem;
+  }
+}
+.contacts-block__details .contacts-block__tel {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.14rem;
+  color: rgba(50, 50, 50, 0.631372549);
+  padding-bottom: 32px;
+}
+.contacts-block__details .contacts-block__tel a {
+  text-decoration: none;
+  color: #323232;
+  padding-left: 20px;
+}
+
+.contacts-block__adress {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.14rem;
+  color: rgba(50, 50, 50, 0.631372549);
+  padding-bottom: 32px;
+}
+.contacts-block__adress span {
+  text-decoration: none;
+  color: #323232;
+  padding-left: 15px;
+  font-size: 1.09rem;
+}
+
+.contacts-block__mail {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.14rem;
+  color: rgba(50, 50, 50, 0.631372549);
+  padding-bottom: 32px;
+}
+.contacts-block__mail a {
+  text-decoration: none;
+  color: #323232;
+  padding-left: 20px;
+}
+
+.contacts-block__map {
+  padding-right: 10px;
+}
+@media (max-width: 1200px) {
+  .contacts-block__map {
+    padding-right: 0px;
+  }
+}
+.contacts-block__map div {
+  width: 684px;
+  height: 340px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 1200px) {
+  .contacts-block__map div {
+    width: 784px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 992px) {
+  .contacts-block__map div {
+    width: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts-block__map div {
+    width: 460px;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-block__map div {
+    width: 300px;
+  }
+}
+
+.contacts-block__footer {
+  width: 100%;
+  bottom: 0px;
+}
+
+.contacts-block__footer-catalog {
+  display: flex;
+  width: 445px;
+  height: 48px;
+}
+@media (max-width: 480px) {
+  .contacts-block__footer-catalog {
+    width: 290px;
+    height: 40px;
+  }
+}
+.contacts-block__footer-catalog span {
+  background-color: #007FA7;
+  width: 100%;
+  padding-top: 16px;
+  text-align: center;
+  font-family: Play;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 480px) {
+  .contacts-block__footer-catalog span {
+    padding-top: 14px;
+    text-align: center;
+    font-family: Play;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+.contacts__button {
+  background-color: #006F92;
+  display: block;
+  width: 57px;
+  height: 48px;
+  background-position: right 45% bottom 50%;
+  background-image: url("/img/icons/Arrow-right.svg");
+  background-size: 23px 32px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 480px) {
+  .contacts__button {
+    width: 57px;
+    height: 40px;
+  }
+}
+
+.contacts__button:hover {
   background-color: #d19439;
   cursor: pointer;
 }
