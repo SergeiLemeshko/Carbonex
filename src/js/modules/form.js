@@ -16,12 +16,12 @@ export default function form(callback) {
 			document.body.style.overflow = "";
 		});
 		//--------------Закрытие формы по клику на область вне формы------------//
-		modal.addEventListener('click', (e) => {
-			if (e.target === modal) {
-				modal.style.display = "none";
-				document.body.style.overflow = "";
-			}
-		});
+		// modal.addEventListener('click', (e) => {
+		// 	if (e.target === modal) {
+		// 		modal.style.display = "none";
+		// 		document.body.style.overflow = "";
+		// 	}
+		// });
 	}
 
 	const formBtn = document.querySelector('.header__button'),
@@ -46,9 +46,56 @@ export default function form(callback) {
 	// }
 
 	// scroll = calcScroll();
-
-
 	bindForm(formBtn, form, closeForm);
-};
 
-//6:13
+	//---------Валидация формы---------//
+
+	// function validateForm() {
+	// 	const form = document.getElementById('form');
+	// 	form.addEventListener('submit', formSend);
+
+	// 	async function formSend(e) {
+	// 		e.preventDefault();
+
+	// 		let error = formValidate(form);
+
+	// 		if (error === 0) {
+
+	// 		} else {
+	// 			alert('dddddddd');
+	// 		}
+	// 	}
+
+	// 	function formValidate(form) {
+	// 		let error = 0;
+	// 		let formReq = document.querySelectorAll('.__req');
+
+	// 		for (let index = 0; index < formReq.length; index++) {
+	// 			const input = formReq[index];
+	// 			formRemoveError(input);
+
+	// 			if (input.classList.contains('__email')) {
+	// 				if (emailTest(input)) {
+	// 					formAddError(input);
+	// 					error++;
+	// 				}
+	// 			} else {
+	// 				if (input.value === '') {
+	// 					formAddError(input);
+	// 					error++;
+	// 				}
+	// 			}
+
+	// 		}
+
+	// 	}
+	// }
+	// function formAddError(input) {
+	// 	input.parentElement.classList.add('__error');
+	// 	input.classList.add('__error');
+	// }
+	// function formRemoveError(input) {
+	// 	input.parentElement.classList.remove('__error');
+	// 	input.classList.remove('__error');
+	// }
+};
