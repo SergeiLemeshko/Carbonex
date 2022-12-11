@@ -720,6 +720,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.7rem;
 }
 
+.send-ok {
+  display: block;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
+  color: #2e2b2b;
+  font-size: 1rem;
+}
+
 .industries {
   max-width: 1920px;
   height: 475px;

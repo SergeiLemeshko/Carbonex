@@ -1,4 +1,3 @@
-
 export default function formValidate() {
 
 	function validation(form) {
@@ -45,8 +44,6 @@ export default function formValidate() {
 		const formBody = document.querySelector('.form__body');
 
 		if (validation(this) == true) {
-			// alert('Форма отправлена')
-
 			function sendInfo(formBody, text) {
 				const form = formBody.parentNode;
 				const sendOk = document.createElement('ok');
@@ -57,11 +54,30 @@ export default function formValidate() {
 				form.classList.add('good-send');
 
 				form.append(sendOk);
-
 			};
-			sendInfo(formBody, "Заявка отправлена!");
+			sendInfo(formBody, "Ваша заявка отправлена!");
+		};
 
-		}
+		event.target.reset();
+
+		setTimeout(() => {
+			function removeSend(formBody) {
+				const form = formBody.parentNode;
+
+				if (form.classList.contains('good-send')) {
+					form.querySelector('.send-ok').remove()
+					form.classList.remove('good-send')
+				};
+			};
+			removeSend(formBody);
+		}, 3000);
 	});
 };
+
+
+
+
+
+
+
 
