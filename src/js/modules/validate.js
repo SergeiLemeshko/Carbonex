@@ -1,36 +1,67 @@
 
-export default function formValidate(callback) {
-	let regTel = /[0-9]/,
-		regName = /[A-Za-zA-Яа-яЁё]/;
-	// reg3 = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\],
-	// reg4 = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0;
+export default function formValidate() {
 
-	let inp = document.querySelector("#name"),
-		spanN = document.querySelector(".span-n");
+	function validation(form) {
 
+		function removeError(input) {
+			const parent = input.parentNode;
 
-	document.querySelector('.form__button').onclick = function (e) {
-		e.preventDefault();
-		if (!validate(regName, inp.value)) {
-			notValid(inp, spanN, "Пожалуйста, введите Ваше имя!");
-		} else {
-			valid(inp, spanN, '');
-		}
+			if (parent.classList.contains('error')) {
+				parent.querySelector('.error-label').remove()
+				parent.classList.remove('error')
+			};
+		};
+
+		function createError(input, text) {
+			const parent = input.parentNode;
+			const errorLabel = document.createElement('label');
+
+			errorLabel.classList.add('error-label');
+			errorLabel.textContent = text;
+
+			parent.classList.add('error');
+
+			parent.append(errorLabel);
+		};
+
+		let result = true;
+
+		const allInputs = form.querySelectorAll('input');
+
+		for (const input of allInputs) {
+
+			removeError(input);
+
+			if (input.value == '') {
+				createError(input, "Поле не заполнено!");
+				result = false;
+			}
+		};
+		return result;
 	};
 
-	function validate(regex, inp) {
-		return regex.test(inp);
-	}
+	document.getElementById('form').addEventListener('submit', function (event) {
+		event.preventDefault();
+		const formBody = document.querySelector('.form__body');
 
-	function notValid(inp, el, mess) {
-		inp.classList.add('is-invalid');
-		el.innerHTML = mess;
-	}
+		if (validation(this) == true) {
+			// alert('Форма отправлена')
 
-	function valid(inp, el, mess) {
-		inp.classList.remove('is-invalid');
-		inp.classList.add('is-valid');
-		el.innerHTML = mess;
-	}
-}
+			function sendInfo(formBody, text) {
+				const form = formBody.parentNode;
+				const sendOk = document.createElement('ok');
+
+				sendOk.classList.add('send-ok');
+				sendOk.textContent = text;
+
+				form.classList.add('good-send');
+
+				form.append(sendOk);
+
+			};
+			sendInfo(formBody, "Заявка отправлена!");
+
+		}
+	});
+};
 
