@@ -14,7 +14,7 @@ export default function scrollSchift() {
 
 		return scrollWidth;
 	}
-	scroll = calcScroll();
+	let scroll = calcScroll();
 	console.log(scroll);
 
 

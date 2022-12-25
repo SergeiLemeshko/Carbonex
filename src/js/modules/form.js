@@ -23,4 +23,4 @@ export default function form(callback) {
 		closeForm = document.querySelector('.close');
 
 	bindForm(formBtn, form, closeForm);
-};
+}
